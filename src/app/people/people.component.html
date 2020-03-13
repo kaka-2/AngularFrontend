@@ -1,0 +1,33 @@
+<table datatable id="star_war" [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="display table table-responsive-lg table-striped">
+  <thead thead-light>
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Gender</th>
+    <th scope="col">Height</th>
+    <th scope="col">Action</th>
+    <th scope="col">Favourite</th>
+  </tr>
+  </thead>
+  <tbody *ngIf="peoples?.length != 0">
+  <tr *ngFor="let people of peoples">
+    <td>{{people.name}}</td>
+    <td>{{people.gender}}</td>
+    <td>{{people.height}}</td>
+    <td>
+      <button id ="mybutton" (click)="detailsClick(people.url)">VIEW</button>
+    </td>
+    <td>
+      <img *ngIf="results.includes(people.name)" src="https://img.icons8.com/dusk/30/000000/like.png"/>
+    </td>
+  </tr>
+  </tbody>
+  <tfoot>
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Gender</th>
+    <th scope="col">Height</th>
+    <th scope="col">Action</th>
+    <th scope="col">Favourite</th>
+  </tr>
+  </tfoot>
+</table>

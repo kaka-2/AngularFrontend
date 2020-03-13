@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <div class="row"><button id="favourites" (click)="favoritePerson(people)">Add as Favourites</button></div>
+  <div class="row">
+    <div class="col-sm-4">
+      <p><b>Name:</b> {{people.name}}</p>
+      <p><b>Height:</b> {{people.height}}</p>
+      <p><b>Mass:</b> {{people.mass}}</p>
+      <p><b>Hair Color:</b> {{people.hair_color}}</p>
+      <p><b>Skin Color:</b> {{people.skin_color}}</p>
+      <p><b>Eye Color:</b> {{people.eye_color}}</p>
+      <p><b>Birth Year:</b> {{people.birth_year}}</p>
+      <p><b>Gender:</b> {{people.gender}}</p>
+      <p><b>Home world:</b> <a href="{{people.homeworld}}">Home</a></p>
+    </div>
+    <div class="col-sm-4">
+      <b>Films</b>
+      <ul *ngFor="let film of people.films">
+        <li>{{film}}</li>
+      </ul>
+      <b>Species</b>
+      <ul *ngFor="let specie of people.species">
+        <li>{{specie}}</li>
+      </ul>
+    </div>
+    <div class="col-sm-4">
+      <b>Vehicle</b>
+      <ul *ngFor="let vehicle of people.vehicles">
+        <li>{{vehicle}}</li>
+      </ul>
+      <b>StarShips</b>
+      <ul *ngFor="let star of people.starships">
+        <li>{{star}}</li>
+      </ul>
+      <p><b>Created:</b>{{people.created}}</p>
+      <p><b>Edited:</b>{{people.edited}}</p>
+    </div>
+  </div>
+</div>
+
+
+
